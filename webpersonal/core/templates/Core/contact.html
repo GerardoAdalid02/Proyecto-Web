@@ -1,8 +1,31 @@
 <!--Aquí vamos a indicar el llamado de la Herencia de base.html-->
 {% extends 'core/base.html' %}
 
-{% block content %}
-<h2>Contacto</h2>
+{% block title %} Contacto {% endblock %}
 
-<p>Gerardo Meléndez | gerardmelen95@gmail.com | &copy; 2022</p>
+{% block background %}{% load static %}{% static 'core/img/contact-bg.jpg' %}{% endblock %}
+
+{% block header %}
+<h1>Contacto</h1>
+<span class="subheading">Asesoría</span>
+{% endblock %}
+
+{% block content %}
+<div class="col-lg-8 col-md-10 mx-auto">
+    <p>
+        Espero que todo lo que hayas leído en mi página web te haya gustado y te haya
+        despertado interés. Si quieres más información para hacer alguna consulta o 
+        realizar algún comentario, siéntase libre de hacerlo por los siguientes medios:
+    </p>
+
+    <br>
+
+    <p>
+        <b>Teléfonos:</b> 6832-1734 / 7480-1462
+    </p>
+
+    <p>
+        <b>Correo electrónico:</b> gerardmelen95@gmail.com
+    </p>
+</div>
 {% endblock %}

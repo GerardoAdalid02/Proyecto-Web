@@ -1,8 +1,34 @@
 <!--Aquí vamos a indicar el llamado de la Herencia de base.html-->
 {% extends 'core/base.html' %}
 
-{% block content %}
-<h2>Acerca de</h2>
+{% block title %} Acerca de {% endblock %}
 
-<p>Hola Gerardo Meléndez</p>
+{% block background %}{% load static %}{% static 'core/img/about-bg.jpg' %}{% endblock %}
+
+{% block header %}
+<h1>Acerca de</h1>
+<span class="subheading">Biografía</span>
+{% endblock %}
+
+{% block content %}  
+<div class="col-lg-3 col-md-4 offset-lg-1">
+    <img class="img-fluid avatar" src="{% static 'core/img/logo.png' %}" alt="Logo Personal">
+</div>
+
+<div class="col-lg-7 col-md-8">
+    <h2 class="section-heading">¡Hola! Me llamo Gerardo</h2>   
+    <p>
+        ¿Qué tal? Mi nombre es Gerardo Adalid Meléndez García, tengo la edad de 20 años, 
+        soy estudiante de 1er. año de la carrera Ingeniería en Sistemas y Computación, 
+        apasionado de la programación con el interés de continuar aprendiendo y 
+        adquirir nuevos conocimientos cada día más. 
+    </p>
+
+    <p>
+        Mi capacidad de generar ideas y solucionar problemas son mis principales 
+        herramientas para crecer, a su vez, tengo el objetivo de aprovechar el 
+        esfuerzo realizado en mis estudios logrados a base de perseverancia, 
+        dedicación y deseos de superación.
+    </p>
+</div>
 {% endblock %}
